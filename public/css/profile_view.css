@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #2d2d2d;
+    color: #ffff;
+    padding-top: 4rem;
+}
+
+.nav-bar {
+    background-color: rgb(25, 25, 25);
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+.logo-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.line-animation {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.profile-icon {
+    color: white;
+    cursor: pointer;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    border-radius: 8px;
+    transition: max-height 0.5s;
+    margin-top: 1rem;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
+    padding: 1rem;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-menu img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.user-menu a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sub-menu hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 1rem 0;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    color: #525252;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.sub-menu-link:hover {
+    transform: translateX(5px);
+    background-color: #f1f1f1;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    padding: 8px;
+    background: #e5e5e5;
+}
+
+/* Profile View Styles */
+.profile-container {
+    align-items: center;
+    display: block;
+    width: 55%;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-color: #ddd;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.profile-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    animation: slideUp 0.5s ease-out;
+}
+
+.stars {
+    color: #ffdc14;
+}
+
+.info-grid {
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-item {
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.9rem;
+    color: #ffff;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    background-color: #ffff;
+    color: #333;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.description {
+    grid-column: 1 / -1;
+}
+
+.social-section {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.social-section h2 {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6%;
+}
+
+.social-link {
+    background-color: #ffff;
+    color: #333;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section h2 {
+    margin-bottom: 1.5rem;
+}
